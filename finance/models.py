@@ -12,7 +12,7 @@ class Income(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    cost = models.IntegerField(default=0)
+    cost = models.PositiveIntegerField(default=0)
     cash = 'cash'
     credit = 'credit'
     type_choices = (
@@ -27,7 +27,7 @@ class Expence(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
-    cost = models.IntegerField(default=0)
+    cost = models.PositiveIntegerField(default=0)
     cash = 'cash'
     credit = 'credit'
     type_choices = (
