@@ -1,6 +1,6 @@
 
-# Music Player API 📝    
-This project is a music player API which i wrote for practicing. A program to list, create and manipulate musics and playlists for different users. it may seem to be super simple but it's just the beginning and will be updated overtime 
+# physlib library management system 📝    
+this project is a library management system written specifically for Kharazmi university faculty of physics library. It is a django API which can help the librarians to keep the track of borrowed books and lockers.It also comes with a tiny accountant manager.
 
 ## technologies used 🦾🤖
 
@@ -58,7 +58,7 @@ Now you're good to go. just run the project with this command
 ```bash
   python manage.py runserver
 ```  
-
+I'll try to write a bash script to automate these levels so it can be easier to use for none programmers
 
 If you prefer to use another database like PostgreSQL or MySQL it's totally fine
 
