@@ -1,6 +1,6 @@
 
 # physlib library management system 📝    
-this project is a library management system written specifically for Kharazmi university faculty of physics library. It is a django API which can help the librarians to keep the track of borrowed books and lockers.It also comes with a tiny accountant manager.
+this project is a library management system written specifically for Kharazmi university faculty of physics library. It is a django API which can help the librarians to keep the track of borrowed books and lockers.It also comes with a tiny Accounting system.
 
 ## technologies used 🦾🤖
 
