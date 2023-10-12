@@ -68,8 +68,9 @@ Now you're good to go. just run the project with this command
 
 Open a browser and head to the [admin pannell](http://127.0.0.1:8000/admin/) and enjoy
 
+# for the later use
 
-
+After you used the system for the first time, there is no need to do all the process presented above anymore, from now on you just need to activate the virtual environment and run the server 
 # Developement
 * this project is still under developement and not fully compeleted and will be updated reguallary over time
 
