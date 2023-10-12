@@ -15,9 +15,9 @@ this project is a library management system written specifically for Kharazmi un
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
 ## How to launch the project  
-To deploy this project clone it on your machine.
+To use this project, first of all clone it on your machine on any directory you prefer.
 
-First of all you need to create a virtual environment in the directory and install the dipendecies there
+Then you need to create a virtual environment in the directory and install the dipendecies there
 
 This is my favourite way of doing it
 
@@ -44,7 +44,7 @@ Then go ahead and install the essential requirements for this project
 ```  
 
 
-Finally you need to apply the migrations to create a database
+Finally you need to apply the migrations to create a database for the project
 ```bash
   python manage.py makemigrations
 ```  
@@ -52,15 +52,28 @@ Finally you need to apply the migrations to create a database
   python manage.py migrate
 ```  
 
-Now you're good to go. just run the project with this command
+# For the first use
 
+before you run the server, you need to create a superuser for admin pannell.
+
+```bash
+  python manage.py createsuperuser
+```
+choose a username, email and password<br />
+Now you're good to go. just run the project with this command
 
 ```bash
   python manage.py runserver
-```  
-I'll try to write a bash script to automate these levels so it can be easier to use for none programmers
+```
 
-If you prefer to use another database like PostgreSQL or MySQL it's totally fine
+Open a browser and head to the [admin pannell](http://127.0.0.1:8000/admin/) and enjoy
 
+# for the later use
+
+After you used the system for the first time, there is no need to do all the process presented above anymore, from now on you just need to activate the virtual environment and run the server 
 # Developement
-this project is still under developement and not fully compeleted and will be updated reguallary over time
+* this project is still under developement and not fully compeleted and will be updated reguallary over time
+
+* I'll try to write a bash script to automate the process of running the system so it can be easier to use for none programmers
+
+* If you prefer to use another database like PostgreSQL or MySQL it's totally fine
