@@ -3,7 +3,7 @@ from django.db import models
 class Member(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    student_number = models.CharField(max_length=255, null=True, blank=True)
+    student_number = models.CharField(max_length=255, null=True, blank=True, unique=True)
     phone_number = models.CharField(max_length=255)
     financial_balance = models.IntegerField(default=0)
     email = models.EmailField()
@@ -18,7 +18,7 @@ class Member(models.Model):
     occupation = models.CharField(max_length=7, choices=occupation_choices)
 
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name} id ={self.id}"
+        return f"id ={self.id} {self.first_name} {self.last_name}/ student number = {self.student_number}"
 
 class Book(models.Model):
     
