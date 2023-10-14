@@ -8,7 +8,11 @@ class TreasuryAdmin(admin.ModelAdmin):
 @admin.register(Income)
 class IncomeAdmin(admin.ModelAdmin):
     list_display = ['title', 'date', 'cost', 'type']
+    search_fields = ['title', 'cost']
+    list_filter = ['type','date']
 
 @admin.register(Expence)
 class ExpenceAdmin(admin.ModelAdmin):
     list_display = ['title', 'date', 'cost', 'type']
+    search_fields = ['title', 'cost']
+    list_filter = ['type','date']
