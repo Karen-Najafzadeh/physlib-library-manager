@@ -24,7 +24,7 @@ class Book(models.Model):
     
     name = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
-    date_borrowed = models.DateTimeField(null=True, blank=True)
+    date_borrowed = models.DateField(null=True, blank=True)
     borrower = models.ForeignKey(Member, null=True, blank=True, on_delete=models.SET_NULL, related_name='books')
     date_to_be_returned = models.DateField(null=True, blank=True)
     
