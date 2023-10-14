@@ -39,11 +39,11 @@ class Book(models.Model):
     genre = models.CharField(max_length=255,choices = genre_choices)
     shelf = models.PositiveIntegerField()
     def __str__(self) -> str:
-        return f"{self.name} {self.author} id = {self.id}"
+        return f"{self.name} by {self.author} id = {self.id}"
 
 class Locker(models.Model):
     number = models.PositiveIntegerField(primary_key=True)
-    student = models.OneToOneField(Member,null=True, blank=True, on_delete=models.SET_NULL)
+    student = models.OneToOneField(Member,null=True, blank=True, on_delete=models.SET_NULL,related_name='lockers')
     cost = models.PositiveIntegerField()
     date_rented = models.DateField(blank=True, null=True)
     date_expires = models.DateField(blank=True, null=True)
