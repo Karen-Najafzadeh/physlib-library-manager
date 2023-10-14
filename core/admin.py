@@ -17,10 +17,11 @@ class UserAdmin(BaseUserAdmin):
 class LibrarianAdmin(admin.ModelAdmin):
     list_display = ['student_number', 'user', 'phone_number' ]
     search_fields = ['user__first_name', 'user__last_name','student_number']
-
+    autocomplete_fields = ['user']
 @admin.register(Shift)
 class ShiftAdmin(admin.ModelAdmin):
     list_display = ['librarian','day', 'start_time', 'end_time']
     search_fields = ['librarian__user__first_name']
     list_filter = ['day','librarian']
     ordering = ['day', 'start_time']
+    autocomplete_fields = ['librarian']
