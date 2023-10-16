@@ -27,3 +27,9 @@ class LockerSerializer(ModelSerializer):
 
         model = Locker
         fields = ['number','cost','student']
+
+class LockerSerializerSimple(ModelSerializer):
+    class Meta:
+
+        model = Locker
+        fields = ['number','cost']
