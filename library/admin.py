@@ -3,7 +3,7 @@ from . models import *
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'author', 'genre', 'shelf', 'borrower', 'date_borrowed', 'date_to_be_returned']
+    list_display = ['number', 'name', 'author', 'genre', 'shelf', 'borrower', 'date_borrowed', 'date_to_be_returned']
     search_fields = ['borrower__first_name','borrower__last_name','borrower__student_number','genre','name','author']
     list_per_page = 10
     autocomplete_fields = ['borrower']

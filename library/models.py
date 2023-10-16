@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 class Member(models.Model):
@@ -38,6 +39,7 @@ class Book(models.Model):
     )
     genre = models.CharField(max_length=255,choices = genre_choices)
     shelf = models.PositiveIntegerField()
+    number = models.IntegerField(validators = [MinValueValidator(1),MaxValueValidator(99)])
     def __str__(self) -> str:
         return f"{self.name} by {self.author} id = {self.id}"
 
