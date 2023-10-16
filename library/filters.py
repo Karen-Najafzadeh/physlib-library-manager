@@ -16,3 +16,9 @@ class MemberFilter(FilterSet):
         model = Member
         fields={'student_number':['exact'],
                 'occupation':['exact']}
+        
+class LockerFilter(FilterSet):
+    class Meta:
+        model = Locker
+        fields={'student__student_number':['exact'],
+                'student':['isnull'],}

@@ -23,3 +23,9 @@ class MemberViewset(ModelViewSet):
     queryset = Member.objects.all()
     serializer_class = MemberSerializer
     filterset_class = MemberFilter
+
+class LockerViewset(ModelViewSet):
+    pagination_class = DefaultPagination
+    queryset = Locker.objects.all()
+    serializer_class = LockerSerializer
+    filterset_class = LockerFilter
