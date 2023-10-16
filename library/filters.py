@@ -5,8 +5,14 @@ class BookFilter(FilterSet):
     class Meta:
         model = Book
         # fields = ['name','author','genre']
-        fields = {'name':['startswith'],
-                    'author':['startswith'],
-                    'borrower':['isnull'],
-                    'genre':['exact'],
-                    'shelf':['exact']}
+        fields={'name':['startswith'],
+                'author':['startswith'],
+                'borrower':['isnull'],
+                'genre':['exact'],
+                'shelf':['exact']}
+
+class MemberFilter(FilterSet):
+    class Meta:
+        model = Member
+        fields={'student_number':['exact'],
+                'occupation':['exact']}

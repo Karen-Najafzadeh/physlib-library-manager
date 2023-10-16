@@ -4,8 +4,10 @@ from django_filters import rest_framework as filter
 from .models import *
 from .serializers import *
 from .filters import *
+from .pagination import DefaultPagination
 
 class BookViewset(ModelViewSet):
+    pagination_class = DefaultPagination
     queryset = Book.objects.all()
     filterset_class = BookFilter
 
@@ -15,3 +17,9 @@ class BookViewset(ModelViewSet):
             return BookSerializerDetailed
         else:
             return BookSerializerSimple
+
+class MemberViewset(ModelViewSet):
+    pagination_class = DefaultPagination
+    queryset = Member.objects.all()
+    serializer_class = MemberSerializer
+    filterset_class = MemberFilter
