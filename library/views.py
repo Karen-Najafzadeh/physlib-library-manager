@@ -7,5 +7,11 @@ from .filters import *
 
 class BookViewset(ModelViewSet):
     queryset = Book.objects.all()
-    serializer_class = BookSerializer
     filterset_class = BookFilter
+
+    def get_serializer_class(self):
+        print(self.action,'\n\n\n\n')
+        if self.action in ['retrieve','update','partial_update']:
+            return BookSerializerDetailed
+        else:
+            return BookSerializerSimple

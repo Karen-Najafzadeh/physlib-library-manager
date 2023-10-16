@@ -7,6 +7,6 @@ class BookFilter(FilterSet):
         # fields = ['name','author','genre']
         fields = {'name':['startswith'],
                     'author':['startswith'],
-                    'genre':['exact'],
                     'borrower':['isnull'],
+                    'genre':['exact'],
                     'shelf':['exact']}
