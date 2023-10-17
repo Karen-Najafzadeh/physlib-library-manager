@@ -23,26 +23,36 @@ This is my favourite way of doing it
 
 
 ```bash
-  python -m venv some_name_for_your_venv
+  python -m venv x
 ```  
 
-Next, activate the environment
+Where **x** can be any name you want (I usually go with **venv**). Next, activate the environment
 
 on windows:
 ```bash
-  .\your_venv_name\Scripts\activate
+  .\x\Scripts\activate
 ``` 
 on linux:
 ```bash
-  source\your_venv_name\bin\activate
-``` 
-Then go ahead and install the essential requirements for this project
+  source\x\bin\activate
+```
+
+# Execution Policy
+
+if you encountered any errors about execution policy, just open a powershell window as administrator and run the following command
+
+```bash
+  Set-ExecutionPolicy Unrestricted
+```
+# Install the requirements
+Back to your terminal, go ahead and install the essential requirements for this project
 
 
 ```bash
   pip install -r requirements.txt
 ```  
 
+# creating a database 
 
 Finally you need to apply the migrations to create a database for the project
 ```bash
@@ -68,7 +78,7 @@ Now you're good to go. just run the project with this command
 
 Open a browser and head to the [admin pannell](http://127.0.0.1:8000/admin/) and enjoy
 
-# for the later use
+# for later use
 
 After you used the system for the first time, there is no need to do all the process presented above anymore, from now on you just need to activate the virtual environment and run the server 
 # Developement
