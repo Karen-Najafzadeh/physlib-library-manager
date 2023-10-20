@@ -4,6 +4,7 @@ from . import views
 
 router = DefaultRouter()
 router.register('librarians', views.LibrarianViewSet)
+router.register('shifts', views.ShiftViewSet)
 
 urlpatterns = [
     path('',include(router.urls))

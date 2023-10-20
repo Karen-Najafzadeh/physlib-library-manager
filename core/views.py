@@ -9,3 +9,9 @@ class LibrarianViewSet(ModelViewSet):
     serializer_class = LibrarianSerializer
     filterset_class = LibrarianFilter
     pagination_class = DefaultPagination
+
+class ShiftViewSet(ModelViewSet):
+    queryset = Shift.objects.all()
+    serializer_class = ShiftSerializer
+    pagination_class = DefaultPagination
+    filterset_class = ShiftFilter

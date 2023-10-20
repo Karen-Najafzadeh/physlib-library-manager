@@ -7,3 +7,11 @@ class LibrarianFilter(FilterSet):
         fields = {
             'student_number':['exact']
         }
+
+class ShiftFilter(FilterSet):
+    class Meta:
+        model = Shift
+        fields = {
+            'day':['exact'],
+            'librarian':['exact']
+        }
