@@ -23,7 +23,7 @@ class Income(models.Model):
     def __str__(self) -> str:
         return f"{self.cost} ريال for {self.title}"
 
-class Expence(models.Model):
+class Expense(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
