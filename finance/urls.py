@@ -4,6 +4,8 @@ from . import views
 
 router = DefaultRouter()
 router.register('treasury', views.TreasuryViewSet)
+router.register('income', views.IncomeViewSet)
+router.register('expense', views.ExpenseViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
