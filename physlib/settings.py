@@ -138,6 +138,12 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFEETIME': timedelta(days = 1),
 }
 
+DJOSER = {
+    'SERIALIZERS':{
+        'user_create':'core.serializers.UserCreateSerializer'
+    }
+}
+
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
