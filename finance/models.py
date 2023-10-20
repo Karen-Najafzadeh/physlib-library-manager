@@ -11,7 +11,7 @@ class Treasury(models.Model):
 class Income(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     cost = models.PositiveIntegerField(default=0)
     cash = 'cash'
     credit = 'credit'
@@ -26,7 +26,7 @@ class Income(models.Model):
 class Expense(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     cost = models.PositiveIntegerField(default=0)
     cash = 'cash'
     credit = 'credit'
